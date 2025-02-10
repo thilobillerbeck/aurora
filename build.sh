@@ -21,6 +21,5 @@ set -ouex pipefail
 
 #### Example for enabling a System Unit File
 
-# systemctl enable podman.socket
-dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-dnf install discord -y
+dnf -y install discord
+systemctl enable podman.socket
