@@ -20,6 +20,6 @@ set -ouex pipefail
 # dnf5 -y copr disable ublue-os/staging
 
 #### Example for enabling a System Unit File
-dnf -y install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-dnf -y install discord
+dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
+dnf -y install discord steam
 systemctl enable podman.socket
