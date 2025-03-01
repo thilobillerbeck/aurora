@@ -17,9 +17,6 @@ FROM ghcr.io/ublue-os/aurora-dx:stable
 RUN dnf5 -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 RUN dnf5 -y install discord
 
-RUN dnf5 -y config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
-RUN dnf5 -y install mullvad-vpn
-
 RUN mkdir -p /var/lib/alternatives && \
     ostree container commit
     
